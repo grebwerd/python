@@ -1,3 +1,5 @@
+
+
 class morseCodeDecoder:
     letter_to_morse_code_map = {
         'A': '.-',     'B': '-...',   'C': '-.-.',
@@ -46,5 +48,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-        
 
