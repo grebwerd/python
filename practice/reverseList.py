@@ -25,3 +25,22 @@ class Solution:
                 head = nextNode
             else:
                 return head
+
+
+    def reverseListII(self, head):
+        if head is None or head.next is None:
+            return head
+    
+        prevNode = None
+    
+        while head:
+            currNode = head #1
+            nextNode = head.next #2
+            head.next = prevNode #None
+            prevNode = currNode #1
+      
+           
+            if nextNode is None:
+                return head
+            
+            head = nextNode    
