@@ -22,3 +22,22 @@ class Solution:
         for i, n in nums:
             d[n] = target - nums
         return d
+
+
+def twoSumII(self, nums, target):
+            length = len(nums)
+            if length < 2:
+                return nums
+            
+            deltas = {}
+            retval = []
+            
+            for index, value in enumerate(nums):
+                complement = target - value
+                if complement in deltas.keys():           
+                    retval.append(deltas[complement])
+                    retval.append(index)
+                    return retval
+                       
+                
+                deltas[value] = index
