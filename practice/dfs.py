@@ -8,13 +8,17 @@ class DFS:
             if vertex not in visited:
                 print("Visiting vertex", vertex)
                 visited.add(vertex)
-                stack.extend(graph[vertex] - visited)
+                print(graph[vertex])
+                print(visited)
+                print(graph[vertex]-visited)
+                #This adds all the nodes node visited so far the current node is connected to
+                stack.extend(graph[vertex]- visited)
 
 
 def main():
     graph = {'A': set(['B', 'C']), 'B': set(['A', 'D', 'E']), 'C': set(['A', 'F']), 'D': set(['B']), 'E': set(['B', 'F']), 'F': set(['C', 'E'])}
     search = DFS() 
-    search.dfs(graph, 'B')
+    search.dfs(graph, 'A')
 
 
 

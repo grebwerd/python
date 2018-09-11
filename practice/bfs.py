@@ -1,18 +1,14 @@
-import collections
-
 def bfs(graph, root):
-    visited, queue = set(), collections.deque([root])
+    visited, queue = set(), [root]
     while queue:
-        vertex = queue.popleft()
+        vertex = queue.pop(0)
         print("The vertex is ", vertex)
-        for neighbor in graph[vertex]:
-            if neighbor not in visited:
-                print("visiting the vertex", vertex ," neighbor ", neighbor)
-                visited.add(neighbor)
-                queue.append(neighbor)
+        if  vertex not in visited:
+            visited.add(vertex)
+            queue.extend(graph[vertex]-visited)
 
 
 
 if __name__ == '__main__':
-    graph = {0: [1, 2], 1: [2], 2: []} 
+    graph = {0: set([1, 2]), 1: set([2]), 2: set([])} 
     bfs(graph, 0)
