@@ -11,12 +11,14 @@ def dfs_iterative(graph, start):
 
     return path
 
-adjacency_matrix = {1: [2, 3], 2: [4, 5],
-                    3: [5], 4: [6], 5: [6],
-                    6: [7], 7: []}
+adjacency_matrix = {10: [5, 15], 5: [2, 4],
+                    2: [], 4: [3], 3:[], 15: [12,14],
+                    12: [], 14: []}
+
+
 
 def main():
-    print(dfs_iterative(adjacency_matrix, 1))
+    print(dfs_iterative(adjacency_matrix, 10))
 
 
 if __name__ == '__main__':
