@@ -1,0 +1,10 @@
+#ignore settings.json
+settings.json
+
+#ignore file all .pyc files
+*.pyc
+*.idea
+
+
+#ignore folder named __pycache__
+__pycache__/
